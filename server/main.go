@@ -8,6 +8,7 @@ import (
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/cors"
+	"github.com/jkwagh/luongmed/internal/database"
 	"github.com/joho/godotenv"
 
 	_ "github.com/lib/pq"
@@ -48,6 +49,7 @@ func main() {
 	}))
 
 	v1Router := chi.NewRouter()
+	v1Router.Post("/user", apiCfg.handlerCreateUser)
 
 	v1Router.Get("ready", handlerReadiness)
 
