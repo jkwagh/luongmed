@@ -1,4 +1,4 @@
-import React, { StrictMode } from "react";
+import { StrictMode } from "react";
 import './scss/styles.scss'
 import { createRoot } from "react-dom/client";
 import App from "./components/App";
@@ -11,8 +11,11 @@ if (!rootElement) {
 
 const root = createRoot(rootElement);
 
+//wildmed, critical care, toxus
+
 root.render(
   <StrictMode>
     <App />
   </StrictMode>,
 );
+

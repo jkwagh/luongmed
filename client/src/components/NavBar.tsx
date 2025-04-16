@@ -12,16 +12,7 @@ const NavBar = () =>{
                     <a className="nav-link" href="/#">Home <span className="sr-only">(current)</span></a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/#/schedule">Schedule</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="/#/login">Login</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="/#/signup">Signup</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="/#/attendees">Attendees</a>
+                    <a className="nav-link" href="/#/events">Events</a>
                 </li>
             </ul>
         </div>
