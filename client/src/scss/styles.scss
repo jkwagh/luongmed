@@ -1,3 +1,10 @@
 // Import all of Bootstrap's CSS
 // Use Bootstrap's SCSS
 @use "bootstrap" as *;
+
+
+.carousel-image{
+    width: 50%;
+    height: 50%;
+    //object-fit: cover; 
+}

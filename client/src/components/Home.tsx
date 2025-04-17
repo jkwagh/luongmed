@@ -1,4 +1,7 @@
 import { Carousel } from 'react-bootstrap';
+import toxusImage from '../assets/toxus/page1.jpeg';
+import wildmedImage from '../assets/wildmed/wildmed placeholder.png';
+import criticalCareImage from '../assets/criticalcare/Critical Care Placeholder.png';
 
 const Home = () => {
     return (
@@ -15,18 +18,18 @@ const Home = () => {
                 To register for any of the listed events, please sign up.
                 </p>
             </div>
-            <div className="mt-4 w-100">
+            <div className="mt-1 w-50">
                 {/* Carousel Component */}
                 <Carousel>
-                <Carousel.Item>
-                    <img className="d-block w-100" src="/path/to/image1.jpg" alt="First slide" />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img className="d-block w-100" src="/path/to/image2.jpg" alt="Second slide" />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img className="d-block w-100" src="/path/to/image3.jpg" alt="Third slide" />
-                </Carousel.Item>
+                    <Carousel.Item>
+                        <img className="d-block w-100 carousel-image" src={toxusImage} alt="First image for toxus event" />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img className="d-block w-100 carousel-image" src={wildmedImage} alt="Placeholder for wildmed image" />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img className="d-block w-100 carousel-image" src={criticalCareImage} alt="Placeholder for critical care image" />
+                    </Carousel.Item>
                 </Carousel>
             </div>
         </main>
