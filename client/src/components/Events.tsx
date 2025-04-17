@@ -1,17 +1,29 @@
 import { Carousel } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import { useAppContext } from './appContext';
 
 const Events = () => {
+  const { events, user } = useAppContext();
+  const navigate = useNavigate();
+
+  console.log('User:', user);
+
+  const handleNavigate = (id: string) => {
+    navigate(`/events/${id}`);
+  };
+
   return (
     <Carousel>
-      <Carousel.Item>
-        <img className="d-block w-100 h-80" src="/path/to/image1.jpg" alt="First slide" />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className="d-block w-100" src="/path/to/image2.jpg" alt="Second slide" />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className="d-block w-100" src="/path/to/image3.jpg" alt="Third slide" />
-      </Carousel.Item>
+      {events.map((event) => (
+        <Carousel.Item key={event.id}>
+          <img
+            className="d-block w-100 h-80 carousel-image"
+            src={event.image}
+            alt={event.name}
+            onClick={() => handleNavigate(event.id)}
+          />
+        </Carousel.Item>
+      ))}
     </Carousel>
   );
 };
