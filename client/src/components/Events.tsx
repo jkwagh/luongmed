@@ -1,6 +1,7 @@
+import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { useAppContext } from './appContext';
+import { useAppContext } from './AppContext';
 
 const Events = () => {
   const { events, user } = useAppContext();
